@@ -8,26 +8,30 @@ a = (255,255,255)
 b = (0,0,0)
 arrows = ['''
 
-^
-|
+	^
+	|
 
 ''','''
 
-|
-v
+	|
+	v
 
 ''', '''
 
-->
+	-->
 
 ''','''
 
-<-
+	<--
+
+''','''
+
+	middle
 
 ''']
 
-count = ['up','down','right','left']
-x = rn.randint(0,3)
+count = ['up','down','right','left', 'middle']
+x = rn.randint(0,4	)
 print(arrows[x])
 game = 1
 score = 0
@@ -50,7 +54,7 @@ a,a,a,b,b,a,a,a,
 
 
 	if t<limit and event.action == "pressed" and event.direction == count[x]:
-		x = rn.randint(0,3)
+		x = rn.randint(0,4)
 		print(arrows[x])
 		score = score + 1
 	elif event.action == "pressed" and t>limit:
